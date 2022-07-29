@@ -23,6 +23,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul[class],
 ol[class],
@@ -67,6 +69,7 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+  margin: 0px auto;
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
@@ -86,18 +89,11 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
-body {
-  font-size: 16px;
-  font-family: "CormorantInfant";
-}
-
 .header {
   width: 100%;
-}
-
-.container {
-  width: 100%;
-  max-width: 1180px;
+  z-index: 99;
+  font-size: 16px;
+  font-family: "CormorantInfant";
 }
 
 .header-container {
@@ -110,7 +106,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 5%;
+  padding: 0px 5% 0px 120px;
 }
 
 .header-logo {
@@ -140,9 +136,99 @@ body {
   color: #000000;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 0px;
+  background-color: rgba(254, 254, 254, 0);
+  background: rgba(254, 254, 254, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #242632;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.717);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.717);
+}
+
+body {
+  height: 9000px;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Spectral";
+}
+
+.text-red {
+  color: #ce0000;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1420px;
+  padding: 0px 5%;
+  margin: 0px auto;
+}
+
+.main-text {
+  max-width: 580px;
+  width: 100%;
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.08em;
+}
+
+.main__text {
+  margin-bottom: 60px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 10px 70px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 200%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-btn:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.section-pt {
+  padding-top: calc(5vh + 8vw);
+}
+
 .first-screen__container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1420px;
   margin: 0 auto;
   display: -webkit-box;
@@ -154,7 +240,106 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 5%;
+  padding: 0px 5% 0px 120px;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.vertical-social__wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 90px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.vertical-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vertical-social svg {
+  width: 34px;
+  height: 34px;
+  fill: #242632;
+  stroke: inherit;
+  stroke-width: inherit;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.vertical-social svg:hover {
+  -webkit-transform: scale(1.1) rotate(360deg);
+      -ms-transform: scale(1.1) rotate(360deg);
+          transform: scale(1.1) rotate(360deg);
+  fill: #810404;
+}
+
+.vertical-social__text {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.2em;
+  color: #242632;
+}
+
+.vertical-social__line-text {
+  width: 1px;
+  height: 100px;
+  background-color: #242632;
+  margin: 20px 0px;
+}
+
+.vertical-social__icons {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .first-screen__left {
@@ -170,10 +355,6 @@ body {
   font-size: 80px;
   line-height: 153%;
   color: #5e6075;
-}
-
-.text-red {
-  color: #ce0000;
 }
 
 .grape-bg {
@@ -194,6 +375,187 @@ body {
   color: #000000;
 }
 
+.section-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-dark {
+  width: 100%;
+  min-height: 600px;
+  background: #242632;
+  padding: 64px 0px;
+  position: relative;
+}
+
+.section-dark__img {
+  width: 420px;
+}
+
+.section-dark .main-btn {
+  background: #ff9759;
+}
+
+.section-dark .main-btn:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: rgba(12, 247, 0, 0.32) 0px 13px 27px -5px, rgba(17, 255, 0, 0.225) 0px 8px 16px -8px;
+          box-shadow: rgba(12, 247, 0, 0.32) 0px 13px 27px -5px, rgba(17, 255, 0, 0.225) 0px 8px 16px -8px;
+}
+
+.section-dark__text {
+  color: white;
+}
+
+#peach-decor {
+  width: 50%;
+  max-width: 500px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  -webkit-transform: translate(0%, 40%);
+      -ms-transform: translate(0%, 40%);
+          transform: translate(0%, 40%);
+  pointer-events: none;
+}
+
+.no-webp .wine-italy{
+  background-image: url("../img/виноград-трафарет-декор.png"); }
+
+.wine-italy {
+  background-position: 0px center;
+  background-repeat: no-repeat;
+}
+
+.wine-text {
+  width: 100%;
+  max-width: 560px;
+}
+
+.title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.wine-text__title {
+  font-weight: 700;
+  font-size: 60px;
+  font-size: calc(4.5vh + 0.5vw);
+  line-height: 100%;
+  letter-spacing: 0.08em;
+  color: #242632;
+  padding-right: 20px;
+  font-family: "Cormorant Infant";
+}
+
+.flag {
+  width: 50px;
+}
+
+.wine-text__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  font-family: "Cormorant Infant";
+  margin-bottom: calc(2vh + 2vw);
+}
+
+.wine-text__inner {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.08em;
+}
+
+.main-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.08em;
+  color: #000000;
+  padding: 10px 60px;
+  display: inline-block;
+  background: #f3d35a;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.brend-logo {
+  width: 50%;
+  max-width: 250px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.brend-logo:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.wine-img {
+  max-width: 460px;
+  width: 100%;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 0px;
+}
+
+.wine-text__img-decor {
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.wine-italy2 .container {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.no-webp .wine-spain{
+  background: url("../img/виноград-декор.png") 0% 0% no-repeat, url("../img/Лист-блюр.png") 100% 100% no-repeat; }
+
+.wine-spain .wine-img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.wine-italy2 .container {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.no-webp .about-section{
+  background: url("../img/лист-винограда-декор.png") 0% 100% no-repeat; }
+
+.about-section .wine-img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 @font-face {
   font-family: CormorantInfant;
   font-display: swap;
@@ -207,14 +569,6 @@ body {
   font-display: swap;
   src: url("../fonts/CormorantInfant-BoldItalic.woff2") format("woff2"), url("../fonts/CormorantInfant-BoldItalic.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CormorantInfant;
-  font-display: swap;
-  src: url("../fonts/CormorantInfant-Light.woff2") format("woff2"), url("../fonts/CormorantInfant-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -269,12 +623,44 @@ body {
 @font-face {
   font-family: CormorantInfant;
   font-display: swap;
+  src: url("../fonts/CormorantInfant-Light.woff2") format("woff2"), url("../fonts/CormorantInfant-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: CormorantInfant;
+  font-display: swap;
   src: url("../fonts/CormorantInfant-SemiBoldItalic.woff2") format("woff2"), url("../fonts/CormorantInfant-SemiBoldItalic.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
-@media screen and (max-width: 1280px) {
+@font-face {
+  font-family: Spectral;
+  font-display: swap;
+  src: url("../fonts/Spectral-Bold.woff2") format("woff2"), url("../fonts/Spectral-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Spectral;
+  font-display: swap;
+  src: url("../fonts/Spectral-Medium.woff2") format("woff2"), url("../fonts/Spectral-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Spectral;
+  font-display: swap;
+  src: url("../fonts/Spectral-Regular.woff2") format("woff2"), url("../fonts/Spectral-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1320px) {
   .first-screen__title {
     font-size: 60px;
   }
@@ -289,7 +675,21 @@ body {
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1160px) {
+  #peach-decor {
+    max-width: 400px;
+  }
+
+  .section-dark__img {
+    width: 300px;
+  }
+
+  .section-dark__text {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
   .first-screen__title {
     width: 50%;
   }
@@ -324,6 +724,16 @@ body {
     top: 0px;
     right: 0px;
   }
+
+  .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .wine-text {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 810px) {
@@ -334,9 +744,25 @@ body {
   .header-nav {
     display: none;
   }
+
+  .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .section-dark__img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .header-container {
+    padding: 0px 5%;
+  }
+
   .first-screen__title {
     line-height: 70px;
     font-size: 50px;
@@ -357,6 +783,14 @@ body {
     max-width: 280px;
     width: 50%;
   }
+
+  .vertical-social__wrapper {
+    display: none;
+  }
+
+  .first-screen__container {
+    padding: 0 5%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -371,3 +805,9 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+.webp .wine-italy{ background-image: url(../img/виноград-трафарет-декор.webp); }
+
+.webp .wine-spain{ background: url(../img/виноград-декор.webp) 0% 0% no-repeat, url(../img/Лист-блюр.webp) 100% 100% no-repeat; }
+
+.webp .about-section{ background: url(../img/лист-винограда-декор.webp) 0% 100% no-repeat; }
