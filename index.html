@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,22 +19,50 @@
         <nav class="header-nav">
             <ul class="header-nav__nav">
                 <li class="header-nav__item">
-                    <a href="" class="header-nav__link">Головна</a>
+                    <a href="#top" class="header-nav__link">Головна</a>
                 </li>
                 <li class="header-nav__item">
-                    <a href="" class="header-nav__link">Італія</a>
+                    <a href="#italy" class="header-nav__link">Італія</a>
                 </li>
                 <li class="header-nav__item">
-                    <a href="" class="header-nav__link">Іспанія</a>
+                    <a href="#spain" class="header-nav__link">Іспанія</a>
                 </li>
                 <li class="header-nav__item">
-                    <a href="" class="header-nav__link">Про Нас</a>
+                    <a href="#contact" class="header-nav__link">Про Нас</a>
                 </li>
-              
 
             </ul>
+
+            <div class="hamburger-menu">
+                <a class="hamburger-menu__btn">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+
+                </a>
+                <ul class="hamburger-items">
+                    <li>
+                        <a href="#">Головна</a>
+                    </li>
+                    <li>
+                        <a href="#italy">Італія</a>
+                    </li>
+                    <li>
+                        <a href="#spain">Іспанія</a>
+                    </li>
+                    <li>
+                        <a href="#about">Про Нас</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Контакти</a>
+                    </li>
+                </ul>
+                </ul>
+
+            </div>
         </nav>
     </div>
+
 </header>
         <div class="vertical-social__wrapper">
 
@@ -72,7 +99,7 @@
 
     </div>
 </div>
-<section class="first-screen">
+<section class="first-screen" id="top">
     <div class="first-screen__container">
         <div class="first-screen__left">
             <h1 class="first-screen__title">
@@ -97,30 +124,32 @@
 </section>
     </div>
     <main>
-
+    <!-- start---------------section-dark-----------start -->
     <section class="section-dark">
         <div class="container">
 
-            <div class="section-dark__img">
+            <div class="section-dark__img" data-aos="zoom-out-right">
                 <picture><source srcset="img/Вино-персик.webp" type="image/webp"><img src="img/Вино-персик.jpg" alt=""></picture>
             </div>
             <div class="section-dark__text">
-                <p class="main-text main__text">Ігристе біле вино солом’яного кольору, зі смаком
+                <p class="main-text main__text" data-aos="zoom-out-left">Ігристе біле вино солом’яного кольору, зі смаком
                     винограду і присмаком солодкого персику, яке буде добре поєднуватися з десертами різних типів. Воно
                     буде чудовим подарунком або просто доповненням затишної вечері</p>
 
-                <a href="" class="main-btn">Каталог</a>
+                <a href="" class="main-btn" data-aos="zoom-out-left">Каталог</a>
 
-                <picture><source srcset="img/Персик.webp" type="image/webp"><img src="img/Персик.png" alt="" id="peach-decor"></picture>
+                <picture><source srcset="img/Персик.webp" type="image/webp"><img src="img/Персик.png" alt="" id="peach-decor" ></picture>
             </div>
 
         </div>
 
     </section>
+    <!-- end---------------section-dark-----------end -->
+    <!-- start---------------wine-italy-----------start -->
 
-    <section class="wine-italy section-pt">
+    <section class="wine-italy section-pt" id="italy">
         <div class="container">
-            <div class="wine-text">
+            <div class="wine-text" data-aos="zoom-out-right">
                 <div class="title-wrapper">
                     <h4 class="wine-text__title">
                         Вино Італія
@@ -151,7 +180,7 @@
 
             </div>
 
-            <div class="wine-img">
+            <div class="wine-img" data-aos="zoom-out-left" data-aos-duration="2000">
 
                 <picture><source srcset="img/Вино-полуничне.webp" type="image/webp"><img src="img/Вино-полуничне.jpg" alt=""></picture>
             </div>
@@ -159,17 +188,18 @@
         </div>
     </section>
 
-    <!--  -->
+    <!-- end---------------wine-italy-----------end -->
 
+    <!-- start---------------wine-italy-----------start -->
 
 
     <section class="wine-italy2 section-pt">
         <div class="container">
-            <div class="wine-img">
+            <div class="wine-img" data-aos="fade-right" data-aos-duration="2000">
 
                 <picture><source srcset="img/quatrovalli-pizza-vine.webp" type="image/webp"><img src="img/quatrovalli-pizza-vine.jpg" alt=""></picture>
             </div>
-            <div class="wine-text">
+            <div class="wine-text" data-aos="fade-left" data-aos-duration="1000">
                 <div class="title-wrapper">
                     <h4 class="wine-text__title">
                         Вино Італія
@@ -208,12 +238,13 @@
 
 
 
-    <!--  -->
+    <!-- end---------------wine-italy-----------end -->
 
 
-    <section class="wine-spain section-pt">
+    <!-- start---------------wine-spain-----------start -->
+    <section class="wine-spain section-pt" id="spain">
         <div class="container">
-            <div class="wine-text">
+            <div class="wine-text" data-aos="fade-up" data-aos-duration="1000">
                 <div class="title-wrapper">
                     <h4 class="wine-text__title">
                         Вино Іспанія
@@ -243,7 +274,7 @@
 
             </div>
 
-            <div class="wine-img">
+            <div class="wine-img" data-aos="fade-up" data-aos-duration="3000">
 
                 <picture><source srcset="img/Іспанські-вина.webp" type="image/webp"><img src="img/Іспанські-вина.jpg" alt=""></picture>
             </div>
@@ -252,12 +283,15 @@
     </section>
 
 
-    <!--  -->
+    <!-- end---------------wine-spain-----------end -->
 
 
 
 
-    <section class="about-section section-pt">
+    <!-- start---------------about-section-----------start -->
+
+
+    <section class="about-section section-pt" id="about">
         <div class="container">
             <div class="wine-img">
 
@@ -291,16 +325,34 @@
 
             </div>
 
-    
+
     </section>
+    <!-- end---------------about-section-----------end -->
+
+
+    <!-- start---------------slogan-section-----------start -->
+
+    <section class="slogan-company section-pt">
+
+        <h3 class="slogan-company__title"> Family Wine Group
+        </h3>
+        <h5 class="slogan-company__subtitle">Швидко Надійно Якісно</h5>
+        <a class="main-btn">Замовити</a>
+
+
+
+    </section>
+
+
+
+    <footer class="footer" id="contact"></footer>
+
 
 </main>
     
 
 </body>
 <script src="js/app.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
+
+
 </html>
