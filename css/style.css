@@ -683,6 +683,11 @@ html {
       flex-wrap: wrap-reverse;
 }
 
+.wine-italy2 .wine-img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .no-webp .wine-spain{
   background: url("../img/виноград-декор.png") 0% 0% no-repeat, url("../img/Лист-блюр.png") 100% 100% no-repeat; }
 
@@ -695,16 +700,64 @@ html {
           box-shadow: none;
 }
 
+.no-webp .about-section{
+  background: url("../img/лист-винограда-декор.png") 0% 100% no-repeat; }
+
+.about-section .wine-img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.about-section .container {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.about-section .wine-text {
+  margin-bottom: 0px;
+}
+
+.no-webp .about-section2{
+  background: url("../img/лист-винограда-декор-спраа.png") 100% 100% no-repeat; }
+
+.about-section2__img {
+  max-width: 400px;
+}
+
+.about-section2__title {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.about-section2__list {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.about-section2__list span {
+  display: inline-block;
+  font-weight: 600;
+  width: 100%;
+  font-size: 16px;
+}
+
+.about-section2__list li {
+  list-style: circle;
+  padding-left: 20px;
+}
+
 .no-webp .slogan-company{
-  background-image: url("../img/Слоган_плантації.jpg"); }
+  background-image: url("../img/sloganwine.png"); }
 
 .slogan-company {
   width: 100%;
   height: 1200px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center bottom;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .slogan-company__title {
@@ -727,27 +780,116 @@ html {
   color: #000000;
 }
 
+.wine-text__inner {
+  padding-top: 30px;
+}
+
+.wine-text__inner p {
+  margin-bottom: 20px;
+}
+
 .footer {
   width: 100%;
-  min-height: 600px;
   background: #262e3e;
+  position: relative;
 }
 
-.no-webp .about-section{
-  background: url("../img/лист-винограда-декор.png") 0% 100% no-repeat; }
-
-.about-section .wine-img {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.footer-contacts {
+  color: white;
+  background: rgba(38, 46, 62, 0.5764705882);
+  width: 50%;
+  position: relative;
+  z-index: 9;
+  padding-left: 10%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding-top: 100px;
 }
 
-.about-section .container {
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
+.footer-contacts .footer-contacts__adress {
+  margin-bottom: 20px;
 }
 
-.about-section .wine-text {
+.footer-contacts ul {
+  list-style: none;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.footer-contacts a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer-contacts a:hover {
+  color: #f96e6e;
+}
+
+.footer-contacts__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-contacts__phone ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.footer-contacts__social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 18px;
+     -moz-column-gap: 18px;
+          column-gap: 18px;
   margin-bottom: 0px;
+}
+
+.footer-contacts__social svg {
+  fill: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer-contacts__social svg:hover {
+  -webkit-transform: scale(1.1) rotate(360deg);
+      -ms-transform: scale(1.1) rotate(360deg);
+          transform: scale(1.1) rotate(360deg);
+  fill: #f96e6e;
+}
+
+.reserved {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 5;
+  background: rgba(38, 46, 62, 0.5764705882);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.footer-map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
 }
 
 @font-face {
@@ -2753,6 +2895,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
         -ms-flex-pack: center;
             justify-content: center;
   }
+
+  .footer-contacts {
+    width: 100%;
+  }
+
+  .footer-map {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -2789,6 +2941,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
     -webkit-backdrop-filter: blur(7px);
             backdrop-filter: blur(7px);
   }
+
+  .slogan-company__title {
+    font-size: 50px;
+  }
+
+  .slogan-company__subtitle {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2823,6 +2983,20 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
   .main-btn {
     padding: 10px 30px;
   }
+
+  .title-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .wine-text__subtitle {
+    text-align: center;
+  }
+
+  .slogan-company {
+    height: 80vh;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2842,6 +3016,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
 
 .webp .wine-spain{ background: url(../img/виноград-декор.webp) 0% 0% no-repeat, url(../img/Лист-блюр.webp) 100% 100% no-repeat; }
 
-.webp .slogan-company{ background-image: url(../img/Слоган_плантації.webp); }
-
 .webp .about-section{ background: url(../img/лист-винограда-декор.webp) 0% 100% no-repeat; }
+
+.webp .about-section2{ background: url(../img/лист-винограда-декор-спраа.webp) 100% 100% no-repeat; }
+
+.webp .slogan-company{ background-image: url(../img/sloganwine.webp); }
