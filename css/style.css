@@ -806,6 +806,10 @@ html {
   padding-top: 100px;
 }
 
+.footer-contacts__social {
+  padding-bottom: 20px;
+}
+
 .footer-contacts .footer-contacts__adress {
   margin-bottom: 20px;
 }
@@ -817,6 +821,7 @@ html {
 }
 
 .footer-contacts a {
+  display: inline-block;
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -1182,6 +1187,12 @@ html {
   -webkit-transform: scale(1.1) rotate(5deg);
       -ms-transform: scale(1.1) rotate(5deg);
           transform: scale(1.1) rotate(5deg);
+}
+
+._error {
+  color: red;
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
 }
 
 body[data-aos-duration="50"] [data-aos],
@@ -2949,6 +2960,16 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
   .slogan-company__subtitle {
     font-size: 30px;
   }
+
+  .footer-contacts__phone ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2996,6 +3017,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos],
 
   .slogan-company {
     height: 80vh;
+  }
+
+  .footer-contacts {
+    padding-top: 30px;
   }
 }
 
